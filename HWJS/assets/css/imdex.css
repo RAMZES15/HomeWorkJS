@@ -56,6 +56,15 @@ body {
   width: 100%;
   padding: 100px 0;
 }
+.all-links__list::-webkit-scrollbar-thumb {
+  background-color: #f10374;
+  border-radius: 5px;
+}
+.all-links__list::-webkit-scrollbar {
+  background-color: #121212;
+  width: 12px;
+  box-shadow: 0px 0px 5px #ffffff;
+}
 .all-links__item {
   width: 100%;
   text-align: center;
