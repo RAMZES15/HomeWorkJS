@@ -52,7 +52,7 @@ body {
         position: absolute;
         @media screen and (max-width: 550px) {
             bottom: 85px;
-            left: calc(50% - 90px);
+            left: calc(50% - 85px);
         }
     }
     &__btn-shop{
@@ -92,7 +92,7 @@ body {
         color: var(--balance);
     }
     @media screen and (max-width: 550px) {
-       width: 180px;
+       width: 170px;
     }
 }
 
@@ -113,6 +113,9 @@ body {
         top: 13px;
         display: inline-block;
         cursor: pointer;
+        @media screen and (max-width: 550px){
+            right: 5px;
+        }
         &:hover{
             & > span {
                 background-color: var(--balance);
@@ -172,6 +175,9 @@ body {
         font-size: 32px;
         margin-bottom: 35px;
         position: relative;
+        @media screen and (max-width: 550px){
+            margin-top: 50px;
+        }
     }
     &__item{
         max-width: 290px;

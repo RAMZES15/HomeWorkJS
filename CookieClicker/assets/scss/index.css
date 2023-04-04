@@ -137,7 +137,7 @@ body {
 @media screen and (max-width: 550px) {
   .cookie__balance {
     bottom: 85px;
-    left: calc(50% - 90px);
+    left: calc(50% - 85px);
   }
 }
 .cookie__btn-shop {
@@ -180,7 +180,7 @@ body {
 }
 @media screen and (max-width: 550px) {
   .balance {
-    width: 180px;
+    width: 170px;
   }
 }
 
@@ -202,6 +202,11 @@ body {
   top: 13px;
   display: inline-block;
   cursor: pointer;
+}
+@media screen and (max-width: 550px) {
+  .shop__close {
+    right: 5px;
+  }
 }
 .shop__close:hover > span {
   background-color: var(--balance);
@@ -265,6 +270,11 @@ body {
   font-size: 32px;
   margin-bottom: 35px;
   position: relative;
+}
+@media screen and (max-width: 550px) {
+  .shop__title {
+    margin-top: 50px;
+  }
 }
 .shop__item {
   max-width: 290px;
