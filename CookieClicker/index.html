@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookieClicker</title>
+    <link rel="shortcut icon" href="./assets/img/cookie/cookieLevel4.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/scss/index.css">
+    <script src="./assets/js/cookieClicker.js" defer></script>
+</head>
+<body class="theme0">
+    <main>
+        <div class="cookie">
+            <div class="container">
+                <div class="cookie__body">
+                    <div class="cookie__balance balance">
+                        Ваші гроші:
+                        <div id="balance" class="balance__value">0</div>
+                    </div>
+                    <div class="cookie__btn-shop balance" onclick="shopOpen()">
+                        Cookie
+                    </div>
+                    <div class="cookie__btn-theme balance" onclick="themeOpen()">
+                        Теми
+                    </div>
+                    <div class="cookie__item" id="cookie">
+                        <img id="cookieImg" src="./assets/img/cookie/cookieLevel0.png" alt="cookie" class="cookie__cookie"> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shop" id="cookieShop">
+            <div class="container">
+                <div class="shop__body">
+                    <h2 class="shop__title">Купуй печево <div  class="shop__close" onclick="shopOpen()"><span></span><span></span></div></h2>
+                    <div class="shop__balance balance">
+                        Ваші гроші:
+                        <div id="balanceShop" class="balance__value">0</div>
+                    </div>
+                    <div class="shop__wrapper">
+                        <div class="shop__item">
+                            <div>
+                                <div class="shop__item-icon"><img src="./assets/img/cookie/cookieLevel0.png" alt="cookie"></div>
+                                <div class="shop__item-description">Печево 'Пряжене молоко': якщо дома немає нічого краще з чайом піде,дає 5 грошей за кожен клік</div>
+                                <div class="shop__item-price">Ціна: Подарунок ;)</div>
+                                <div class="shop__item-status" id="cookieStatus0">Статус: Це печево у вас є</div>
+                            </div>
+                            <div class="btn-wrapper">
+                                <button class="shop__item-btn" id="cookieLevel0" style="display: none;">BUY</button>
+                                <button class="shop__item-btn" id="cookieSelect0">select</button>
+                            </div>
+                        </div>
+                        <div class="shop__item">
+                            <div>
+                                <div class="shop__item-icon"><img src="./assets/img/cookie/cookieLevel1.png" alt="cookie"></div>
+                                <div class="shop__item-description">Печево 'Napoleon': вже краще але все рівно трішки сумно, дає 10 грошей за кожен клік</div>
+                                <div class="shop__item-price">Ціна: 200 грошей</div>
+                                <div class="shop__item-status" id="cookieStatus1">Статус: У вас немає цього печева</div>
+                            </div>
+                            <div class="btn-wrapper">
+                                <button class="shop__item-btn" id="cookieLevel1">BUY</button>
+                                <button class="shop__item-btn" id="cookieSelect1">select</button>
+                            </div>
+                        </div>
+                        <div class="shop__item">
+                            <div>
+                                <div class="shop__item-icon"><img src="./assets/img/cookie/cookieLevel2.png" alt="cookie"></div>
+                                <div class="shop__item-description">Печево 'Вівсяне': це печево вже чудово доповнить чашку гарячого чаю в холодний вечір, дає 30 грошей за клік</div>
+                                <div class="shop__item-price">Ціна: 400 грошей</div>
+                                <div class="shop__item-status" id="cookieStatus2">Статус: У вас немає цього печева</div>
+                            </div>
+                            <div class="btn-wrapper">
+                                <button class="shop__item-btn" id="cookieLevel2">BUY</button>
+                                <button class="shop__item-btn" id="cookieSelect2">select</button>
+                            </div>
+                        </div>
+                        <div class="shop__item">
+                            <div>
+                                <div class="shop__item-icon"><img src="./assets/img/cookie/cookieLevel3.png" alt="cookie"></div>
+                                <div class="shop__item-description">Печево 'З висівками': чудове печево можна їсти прото так без чаю або кави, напевно так навіь краще, даж 50 грошей за клік</div>
+                                <div class="shop__item-price">Ціна: 1000 грошей</div>
+                                <div class="shop__item-status" id="cookieStatus3">Статус: У вас немає цього печева</div>
+                            </div>
+                            <div class="btn-wrapper">
+                                <button class="shop__item-btn" id="cookieLevel3">BUY</button>
+                                <button class="shop__item-btn" id="cookieSelect3">select</button>
+                            </div>
+                        </div>
+                        <div class="shop__item">
+                            <div>
+                                <div class="shop__item-icon"><img src="./assets/img/cookie/cookieLevel4.png" alt="cookie"></div>
+                                <div class="shop__item-description">Печево 'З шоколадом': Йой ну це просто без коментарів хто знає той знає, дає 100 грошей за клік</div>
+                                <div class="shop__item-price">Ціна: 2400 грошей</div>
+                                <div class="shop__item-status" id="cookieStatus4">Статус: У вас немає цього печева</div>
+                            </div>
+                            <div class="btn-wrapper">
+                                <button class="shop__item-btn" id="cookieLevel4">BUY</button>
+                                <button class="shop__item-btn" id="cookieSelect4">select</button>
+                            </div>
+                        </div>
+                        <div class="shop__item">
+                            <div>
+                                <div class="shop__item-icon"><img src="./assets/img/cookie/cookieLevel5.png" alt="cookie"></div>
+                                <div class="shop__item-description">Печево 'Oreo': Не дуже його люблю але воно найдорожче тому і буде давати найбільше грошей за клік і коштувати в 250 роазів більше ніж Наполеон, дає 200 грошей за клік</div>
+                                <div class="shop__item-price">Ціна: 5000 грошей</div>
+                                <div class="shop__item-status" id="cookieStatus5">Статус: У вас немає цього печева</div>
+                            </div>
+                            <div class="btn-wrapper">
+                                <button class="shop__item-btn" id="cookieLevel5">BUY</button>
+                                <button class="shop__item-btn" id="cookieSelect5">select</button>
+                            </div>
+                        </div>
+                        <div class="shop__item">
+                            <div>
+                                <div class="shop__item-icon"><img src="./assets/img/cookie/cookieLevel6.png" alt="cookie"></div>
+                                <div class="shop__item-description">Печево 'Вушко': Вушко як вушка, але так здається тільки на перший погляд, дає рандомно від 0 до 900 грошей за клік</div>
+                                <div class="shop__item-price">Ціна: 8000 грошей</div>
+                                <div class="shop__item-status" id="cookieStatus6">Статус: У вас немає цього печева</div>
+                            </div>
+                            <div class="btn-wrapper">
+                                <button class="shop__item-btn" id="cookieLevel6">BUY</button>
+                                <button class="shop__item-btn" id="cookieSelect6">select</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="shop" id="themeShop">
+            <div class="container">
+                <div class="shop__body">
+                    <h2 class="shop__title">Купуй теми <div  class="shop__close" onclick="themeOpen()"><span></span><span></span></div></h2>
+                    <div class="shop__balance balance">
+                        Ваші гроші:
+                        <div id="balanceTheme" class="balance__value">0</div>
+                    </div>
+                    <div class="shop__wrapper">
+                        <div class="shop__item">
+                            <div>
+                                <div class="shop__item-icon"><img src="./assets/img/bg.jpg" alt="cookie"></div>
+                                <div class="shop__item-description">Дефолтна тема, просто дефолтна тема шо ше з неї взяти?</div>
+                                <div class="shop__item-price">Ціна: яка ціна це дефолтна тема</div>
+                                <div class="shop__item-status" id="themeStatus0">Статус: Це тема у вас є</div>
+                            </div>
+                            <div class="btn-wrapper">
+                                <button class="shop__item-btn" id="themeLevel0" style="display: none;">BUY</button>
+                                <button class="shop__item-btn" id="themeSelect0">select</button>
+                            </div>
+                        </div>
+                        <div class="shop__item">
+                            <div>
+                                <div class="shop__item-icon"><img src="./assets/img/bg2.jpg" alt="cookie"></div>
+                                <div class="shop__item-description">Червона тема така сама як дефолтна тільким не така, в червоних відтінках синього, а ше дорога</div>
+                                <div class="shop__item-price">Ціна: 7000 грошей</div>
+                                <div class="shop__item-status" id="themeStatus1">Статус: У вас немає цієї теми</div>
+                            </div>
+                            <div class="btn-wrapper">
+                                <button class="shop__item-btn" id="themeLevel1">BUY</button>
+                                <button class="shop__item-btn" id="themeSelect1">select</button>
+                            </div>
+                        </div>
+                        <div class="shop__item">
+                            <div>
+                                <div class="shop__item-icon"><img src="./assets/img/bg3.jpg" alt="cookie"></div>
+                                <div class="shop__item-description">Неонова синя дуже круто дуже класно спробуй не пожалій!!!</div>
+                                <div class="shop__item-price">Ціна: 10000 грошей</div>
+                                <div class="shop__item-status" id="themeStatus2">Статус: У вас немає цієї теми</div>
+                            </div>
+                            <div class="btn-wrapper">
+                                <button class="shop__item-btn" id="themeLevel2">BUY</button>
+                                <button class="shop__item-btn" id="themeSelect2">select</button>
+                            </div>
+                        </div>
+                        <div class="shop__item">
+                            <div>
+                                <div class="shop__item-icon"><img src="./assets/img/bg4.jpg" alt="cookie"></div>
+                                <div class="shop__item-description">Мммм червоний неон, мені лінь придумувати опис</div>
+                                <div class="shop__item-price">Ціна: 15000 грошей</div>
+                                <div class="shop__item-status" id="themeStatus3">Статус: У вас немає цієї теми</div>
+                            </div>
+                            <div class="btn-wrapper">
+                                <button class="shop__item-btn" id="themeLevel3">BUY</button>
+                                <button class="shop__item-btn" id="themeSelect3">select</button>
+                            </div>
+                        </div>
+                        <div class="shop__item">
+                            <div>
+                                <div class="shop__item-icon"><img src="./assets/img/bg5.jpg" alt="cookie"></div>
+                                <div class="shop__item-description">Brawl stars ну а чо нє хай буде собі нікому не заважає</div>
+                                <div class="shop__item-price">Ціна: 25000 грошей</div>
+                                <div class="shop__item-status" id="themeStatus4">Статус: У вас немає цієї теми</div>
+                            </div>
+                            <div class="btn-wrapper">
+                                <button class="shop__item-btn" id="themeLevel4">BUY</button>
+                                <button class="shop__item-btn" id="themeSelect4">select</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

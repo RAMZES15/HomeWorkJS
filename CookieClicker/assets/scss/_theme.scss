@@ -1,0 +1,83 @@
+:root{
+    --body-bg: #09161c;
+    --cookie-bg: url(../img/bg.jpg);
+    --card-main: #0595a3;
+    --text: white;
+    --balance: #cd3240;
+    --border: white;
+    --shop-bg: #222d33;
+    --status: black;
+}
+
+.theme0 {
+    --body-bg: #09161c;
+    --cookie-bg: url(../img/bg.jpg);
+    --card-main: #0595a3;
+    --text: white;
+    --balance: #cd3240;
+    --border: white;
+    --shop-bg: #222d33;
+    --status: black;
+}
+
+.theme1 {
+    --body-bg: #09161c;
+    --cookie-bg: url(../img/bg2.jpg);
+    --card-main: #cd3240;
+    --text: white;
+    --balance: #00eaff;
+    --border: #dd9898;
+    --shop-bg: #222d33;
+    --status: black;
+}
+
+.theme2{
+    --body-bg: #09161c;
+    --cookie-bg: url(../img/bg3.jpg);
+    --card-main: #0595a3;
+    --text: white;
+    --balance: #cd3240;
+    --border: white;
+    --shop-bg: #222d33;
+    --status: black;
+    & .balance{
+        box-shadow: 5px 5px 10px #00eaff;
+    }
+    & .shop__item {
+        box-shadow: 5px 5px 10px #00eaff;
+    }
+    & .shop__title {
+        box-shadow: 5px 5px 10px #00eaff;
+    }
+}
+
+.theme3 {
+    --body-bg: #09161c;
+    --cookie-bg: url(../img/bg4.jpg);
+    --card-main: #cd3240;
+    --text: white;
+    --balance: #00eaff;
+    --border: #dd9898;
+    --shop-bg: #222d33;
+    --status: black;
+    & .balance{
+        box-shadow: 5px 5px 10px #ff0015;
+    }
+    & .shop__item {
+        box-shadow: 5px 5px 10px #ff0015;
+    }
+    & .shop__title {
+        box-shadow: 5px 5px 10px #ff0015;
+    }
+}
+
+.theme4 {
+    --body-bg: #09161c;
+    --cookie-bg: url(../img/bg5.jpg);
+    --card-main: #e6b411;
+    --text: white;
+    --balance: #ff0000;
+    --border: #0077ff;
+    --shop-bg: #222d33;
+    --status: black;
+}
