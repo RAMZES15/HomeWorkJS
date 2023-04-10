@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <script src="./assets/js/main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="car">
+            <h2 class="car__title">Пошук автомобіля</h2>
+            <span>Підказка: можна знайти matiz,bmw,mercedes,audi але потрібшо шукати або по моделі або по марці авто,можнна вводити запит виликими або маленькими літерами запити зводяться до одного регістра</span>
+            <div class="car__find"><input  type="text" name="find-car" id="find-car"><button id="find-car-btn">FIND CAR</button></div>
+            <div class="car__wrapper">
+                <div class="car__photo"><img src="" alt="car photo" id="car-photo"></div>
+                <div class="car__info">
+                    <div class="car__info-item">Виробник: <span id="manufacturer"></span></div>
+                    <div class="car__info-item">Модель: <span id="model"></span></div>
+                    <div class="car__info-item">Рік випуску: <span id="year_of_manufacture"></span></div>
+                    <div class="car__info-item">Середня швидкість: <span id="average_speed"></span></div>
+                    <div class="car__info-item">Об'єм двигуна: <span id="engine_capacity"></span></div>
+                    <div class="car__info-item">Росхід палив а на 100км: <span id="average_fuel_consumption"></span></div>
+                    <div class="car__info-item">Власники: <span id="drivers"></span></div>
+                    <div class="car__info-item">Пробіг: <span id="mileage"></span></div>
+                    <div class="car__info-item">Колір: <span id="color"></span></div>
+                </div> 
+            </div>
+            <div class="car__driver">
+                <h2 class="car__driver-title">Перевірим чи був такий власник</h2>
+                <input  type="text" name="driver" id="driver">
+                <button id="driver-btn">CHECKING DRIVER</button>
+            </div>
+            <div class="car__add-driver">
+                <h2 class="car__add_driver-title">Додати до списку власників</h2>
+                <input  type="text" name="add-driver" id="add-driver">
+                <button id="add-driver-btn">ADD DRIVER</button>
+            </div>
+            <div class="car__time-calculation">
+                <h2 class="car__time-calculation-title">Розрахунок часу та кількості палива на певну дистанцію</h2>
+                <input  type="text" name="time-calculation" id="time-calculation">
+                <button id="time-calculation-btn">CALC</button>
+                <div class="time-calculation-output">Результат: <span id="time-calculation-output"></span></div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="time">
+            <h2 class="time__title">Об'єкт часу</h2>
+            <div class="time__output">Вивід часу: <span id="time-output"></span></div>
+            <button id="time-output-btn">Вивисти час</button>
+            <div>
+                <label for="userHour">Додати години</label>
+                <input type="number" id="userHour">
+                <button id="addHour">Додати</button>
+            </div>
+            <div>
+                <label for="userMinute">Додати хвилини</label>
+                <input type="number" id="userMinute">
+                <button id="addMinute">Додати</button>
+            </div>
+            <div>
+                <label for="userSecond">Додати секунди</label>
+                <input type="number" id="userSecond">
+                <button id="addSecond">Додати</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="fraction">
+            <h2 class="fraction__title">Операції з дробами</h2>
+            <div>Підказка: Дроби вводити в поля наступним чином: 10/20, 12/24, 15/40 і так далі</div>
+            <div>
+                <label for="fraction0">Додати перший дріб</label>
+                <input type="text" id="fraction0">
+                <button id="fraction0-btn">Додати</button>
+            </div>
+            <div>
+                <label for="fraction1">Додати другий дріб</label>
+                <input type="text" id="fraction1">
+                <button id="fraction1-btn">Додати</button>
+            </div>
+            <button id="add-btn">Додати</button>
+            <button id="subtract-btn">Відняти</button>
+            <button id="multiply-btn">Помножити</button>
+            <button id="divide-btn">Поділити</button>
+        </div>
+    </div>
+</body>
+</html>
