@@ -99,7 +99,7 @@ ul {
   display: block;
 }
 
-.music {
+.music, .traffic-lights {
   position: absolute;
   top: 0;
   z-index: 10;
@@ -111,28 +111,111 @@ ul {
   border-radius: 20px;
   overflow: hidden;
 }
-.music.--open {
+.music.--open, .traffic-lights.--open {
   transform: translate(-50%, -50%);
 }
-.music__btn-form {
-  margin-bottom: 40px;
-}
-.music__btn-form:hover {
-  box-shadow: 2px 2px 10px gray;
-}
-.music__body {
+.music__body, .traffic-lights__body {
   background-color: white;
   width: 100%;
   height: 85vh;
   position: relative;
 }
-.music__title {
+.music__title, .traffic-lights__title {
   padding-top: 15px;
   padding-bottom: 15px;
   text-align: center;
   font-size: 35px;
   border-bottom: 1px solid lightgray;
   position: relative;
+}
+
+.traffic-lights__item-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 71px);
+}
+.traffic-lights__item {
+  width: 250px;
+  height: 500px;
+  background-color: rgb(46, 46, 46);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.traffic-lights__red, .traffic-lights__yellow, .traffic-lights__green {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+.traffic-lights__red {
+  background-color: rgba(255, 0, 0, 0.3);
+  transition: all 0.6s;
+}
+.traffic-lights__red.--on {
+  background-color: red;
+  box-shadow: 0px 0px 20px 10px red;
+}
+.traffic-lights__yellow {
+  background-color: rgba(255, 255, 0, 0.3);
+  transition: all 0.6s;
+}
+.traffic-lights__yellow.--on {
+  background-color: yellow;
+  box-shadow: 0px 0px 20px 10px yellow;
+}
+.traffic-lights__green {
+  background-color: rgba(0, 128, 0, 0.3);
+  transition: all 0.6s;
+}
+.traffic-lights__green.--on {
+  background-color: rgb(0, 201, 0);
+  box-shadow: 0px 0px 20px 10px rgb(0, 201, 0);
+}
+
+.infoTrafficLights {
+  position: absolute;
+  bottom: 30px;
+  width: 350px;
+  text-align: center;
+}
+
+.clickTrafficLights, .clickTrafficLightsAuto {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  width: 210px;
+  height: 100px;
+  background-color: #94ceb9;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 15px #659d89;
+  color: white;
+  transition: transform 0.5s, background-color 0.5s;
+  cursor: pointer;
+}
+.clickTrafficLights:hover, .clickTrafficLightsAuto:hover {
+  transform: scale(1.05);
+  background-color: #659d89;
+}
+
+.clickTrafficLightsAuto {
+  bottom: 170px;
+}
+
+.music__btn-form {
+  margin-bottom: 40px;
+}
+.music__btn-form:hover {
+  box-shadow: 2px 2px 10px gray;
 }
 .music__add {
   position: absolute;

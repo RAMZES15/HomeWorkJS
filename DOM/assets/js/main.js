@@ -89,8 +89,8 @@ function addPlayList(author = 'Лев', songName = 'Зараз я вам пок�
 }
 
 function openMusic(){
-    const overlay = document.getElementById('overlay').classList.toggle('--open')
-    const music = document.getElementById('music').classList.toggle('--open')
+    document.getElementById('overlay').classList.toggle('--open')
+    document.getElementById('music').classList.toggle('--open')
 }
 document.getElementById('close').addEventListener('click', openMusic)
 document.getElementById('musicBtn').addEventListener('click', openMusic)
@@ -262,5 +262,55 @@ const hint = [
 ]
 
 console.log('Підказка з посиланнями на треки які можна додати до списку',hint)
+
+//-------------------------------------------------------------trafficLights--------------------------------------------------------------------\\
+let trafficLightsIndex = 1
+let trafficLightsAutoOn = false
+function trafficLights(){
+    const red = document.getElementById('red')
+    const yellow = document.getElementById('yellow')
+    const green = document.getElementById('green')
+    red.classList.remove('--on')
+    yellow.classList.remove('--on')
+    green.classList.remove('--on')
+    switch(trafficLightsIndex){
+        case 1:
+            red.classList.add('--on')
+            trafficLightsIndex++
+            break;
+        case 2:
+            yellow.classList.add('--on')
+            trafficLightsIndex++
+            break;
+        case 3:
+            green.classList.add('--on')
+            trafficLightsIndex = 1
+            break;
+    }    
+}
+document.getElementById('clickTrafficLights').addEventListener('click', trafficLights)
+
+
+let intervalId
+document.getElementById('clickTrafficLightsAuto').addEventListener('click', function() {
+    document.getElementById('red').classList.remove('--on')
+    document.getElementById('yellow').classList.remove('--on')
+    document.getElementById('green').classList.remove('--on')
+    trafficLightsIndex = 1
+    trafficLightsAutoOn = !trafficLightsAutoOn
+    if(trafficLightsAutoOn){
+        intervalId = setInterval(trafficLights, 1500);
+    }else{
+        clearInterval(intervalId)
+    }
+})
+
+function openTrafficLights(){
+    document.getElementById('overlay').classList.toggle('--open')
+    document.getElementById('trafficLights').classList.toggle('--open')
+}
+document.getElementById('closeTrafficLights').addEventListener('click', openTrafficLights)
+document.getElementById('trafficLightsBtn').addEventListener('click', openTrafficLights)
+
 
 

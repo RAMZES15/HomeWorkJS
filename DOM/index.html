@@ -22,7 +22,7 @@
                         <span class="intro__red-text">&laquo;бурякової академії&raquo;</span>
                         <span class="intro__subtitle">Натисни на кнопку щоб переглянути список</span>
                         <button class="intro__btn btn" id="musicBtn">ТОП</button>
-                        <button class="intro__traffic-lights btn">Світлофор</button>
+                        <button class="intro__traffic-lights btn" id="trafficLightsBtn">Світлофор</button>
                     </div>
                 </div>
             </div>
@@ -46,6 +46,23 @@
                             <input type="text" id="img" class="music__input" placeholder="Наприклад: https://stepanGigaCeiSon.png">
                             <button id="addSong" class="btn music__btn-form" >Додати</button>
                             <div id="addInfo" class="music__form-info">Аудіо та обкладинку можна додавати тільки за посиланнями на них типу https://YorSong.mp3 або http://Img.png, працює localStorage тому після перзавнатження додані треки збережуться, в консолі є підказка з деякими посиланнями</div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="traffic-lights" id="trafficLights">
+                <div class="container">
+                    <div class="traffic-lights__body">
+                        <h2 class="traffic-lights__title">Світлофор<span class="close" id="closeTrafficLights"><span></span><span></span></span></h2>
+                        <div class="traffic-lights__item-wrapper">
+                            <div class="traffic-lights__item">
+                                <span class="traffic-lights__red" id="red"></span>
+                                <span class="traffic-lights__yellow" id="yellow"></span>
+                                <span class="traffic-lights__green" id="green"></span>
+                            </div>
+                            <span class="infoTrafficLights">При повторному натискані на 'АВТОМАТИЧНО' світлофор вимикається і можна пермикати в ручну</span>
+                            <div class="clickTrafficLights" id="clickTrafficLights">Перемкнути</div>
+                            <div class="clickTrafficLightsAuto" id="clickTrafficLightsAuto">Автоматично</div>
                         </div>
                     </div>
                 </div>
