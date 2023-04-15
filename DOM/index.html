@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <script src="./assets/js/main.js" defer></script>
+    <script src="./assets/js/main1.js" defer></script>
+</head>
+<body>
+    <audio id="audio" src="" controls style="display: none;"></audio>
+    <div class="overlay" id="overlay"></div>
+    <main>
+        <div class="main__body">
+            <div class="intro">
+                <div class="container">
+                    <div class="intro__body">
+                        <span class="intro__upertittle">ТОП</span>
+                        <h1 class="intro__title">Пісень від </h1>
+                        <span class="intro__red-text">&laquo;бурякової академії&raquo;</span>
+                        <span class="intro__subtitle">Натисни на кнопку щоб переглянути список</span>
+                        <button class="intro__btn btn" id="musicBtn">ТОП</button>
+                        <button class="intro__traffic-lights btn">Світлофор</button>
+                    </div>
+                </div>
+            </div>
+            <div class="music" id="music">
+                <div class="container">
+                    <div class="music__body">
+                        <h2 class="music__title"><span class="decorayion">ТОП пісень</span> <span>Плеєр</span> <span class="close" id="close"><span></span><span></span></span></h2>
+                        <ul id="musicList" class="music__list">
+                        </ul>
+                        <div class="music__add" id="openForm">add song</div>
+                        <div class="overlay" id="overlay-form"></div>
+                        <div class="music__add-form" id="form">
+                            <span class="close" id="close-form"><span></span><span></span></span>
+                            <label for="author" class="music__label">Назва группи</label>
+                            <input type="text" id="author" class="music__input" placeholder="Наприклад: Степат Гіга">
+                            <label for="songName" class="music__label">Назва трек</label>
+                            <input type="text" id="songName" class="music__input" placeholder="Наприклад: Цей сон">
+                            <label for="song" class="music__label">Посилання на трек</label>
+                            <input type="text" id="song" class="music__input" placeholder="Наприклад: https://stepanGigaCeiSon.mp3">
+                            <label for="img" class="music__label">Посилання на обкладинку</label>
+                            <input type="text" id="img" class="music__input" placeholder="Наприклад: https://stepanGigaCeiSon.png">
+                            <button id="addSong" class="btn music__btn-form" >Додати</button>
+                            <div id="addInfo" class="music__form-info">Аудіо та обкладинку можна додавати тільки за посиланнями на них типу https://YorSong.mp3 або http://Img.png, працює localStorage тому після перзавнатження додані треки збережуться, в консолі є підказка з деякими посиланнями</div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>  
+</body>
+</html>
