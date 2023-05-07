@@ -1,0 +1,11 @@
+:root{
+    --c-bg:white;
+}
+
+.dark{
+    --c-bg: darkcyan;
+}
+
+body {
+    background: var(--c-bg);
+}
